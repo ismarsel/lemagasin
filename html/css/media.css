@@ -1,0 +1,83 @@
+/* === DESKTOP FIRST === */
+
+/* xl <= Extra extra large (xxl) */
+@media (max-width : 1400px) {
+
+}
+
+/* lg <= Extra large (xl) */
+@media (max-width : 1200px) {
+ .header__middleRow {
+  flex-direction: column;
+  padding: 1.5em 0;
+ }
+ .logo {
+  position: unset;
+  transform: translate(0,0);
+  order: 1;
+ }
+ .main-nav {
+  order: 3;
+  padding-top: 1em;
+ }
+}
+
+/* md <= Large (lg) */
+@media (max-width : 992px) {
+
+}
+
+/* sm <= Medium (md) */
+@media (max-width : 768px) {
+  .top-line__right {
+    height: 40px;
+  }
+  .top-line__right span {
+    display: none;
+  }
+  .top-line__right a {
+    padding-right: 0;
+  }
+}
+
+/* xs <= Small (sm) */
+@media (max-width : 576px) {
+
+}
+
+
+/* === MOBILE FIRST === */
+
+/* Custom (xs) */
+@media (min-width : 0) {
+
+}
+
+/* Small (sm) */
+@media (min-width : 576px) {
+
+}
+
+/* Medium (md) */
+@media (min-width : 768px) {
+
+}
+
+/* Large (lg) */
+@media (min-width : 992px) {
+
+}
+
+/* Extra large (xl) */
+@media (min-width : 1200px) {
+	.text {
+		font-size: 18px;
+	}
+}
+
+/* Extra extra large (xxl) */
+@media (min-width : 1400px) {
+	.text {
+		font-size: 22px;
+	}
+}
