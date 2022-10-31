@@ -4,11 +4,11 @@
   <footer-app />
 </template>
 <script>
-import HeaderApp from '@/components/HeaderApp.vue';
-import FooterApp from '@/components/FooterApp.vue';
+import HeaderApp from "@/components/HeaderApp.vue";
+import FooterApp from "@/components/FooterApp.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     HeaderApp,
     FooterApp,
