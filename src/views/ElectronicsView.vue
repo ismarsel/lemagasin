@@ -6,7 +6,7 @@
           Electronics
           <span class="products-count">{{ this.quantity }} units</span>
         </h1>
-        <select-filter />
+        <select-filter @sortBy="sortByHandle" />
         <search-input />
       </div>
       <product-list />
@@ -18,7 +18,7 @@
 import ProductList from "@/components/ProductList.vue";
 import SelectFilter from "@/components/UI/SelectFilter.vue";
 import SearchInput from "@/components/UI/SearchInput.vue";
-import { mapActions, mapGetters } from "vuex";
+import { mapActions, mapGetters, mapMutations } from "vuex";
 export default {
   name: "ElectronicsView",
   components: {
@@ -39,6 +39,11 @@ export default {
   },
   methods: {
     ...mapActions(["FETCH_PRODUCTS"]),
+    ...mapMutations(["SORT_PRODUCTS"]),
+    sortByHandle(option) {
+      console.log(option);
+      this.SORT_PRODUCTS(option);
+    },
   },
   created() {
     this.FETCH_PRODUCTS(this.categoryName);

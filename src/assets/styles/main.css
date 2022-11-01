@@ -413,7 +413,7 @@ a {
   border-radius: 4px;
   line-height: 36px;
   cursor: pointer;
-  background-image: url("../images/icons/filter_arrow_white.svg");
+  /* background-image: url("../images/icons/filter_arrow_white.svg"); */
   background-repeat: no-repeat;
   background-position: 90%  center;
   color: var(--backgroundColor);
