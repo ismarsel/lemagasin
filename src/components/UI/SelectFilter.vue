@@ -5,11 +5,9 @@
 </template>
 
 <script>
-  export default {
-    name: 'SelectFilter'    
-  }
+export default {
+  name: "SelectFilter",
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
