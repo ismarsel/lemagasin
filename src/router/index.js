@@ -1,47 +1,51 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
 
 const routes = [
   {
     path: "/",
-    name: "home",
-    component: HomeView,
+    name: "Home",
+    // component: HomeView,
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/HomeView.vue"),
+    meta: {
+      layout: "AppLayoutDefault",
+    },
   },
   {
     path: "/MensClothing",
     name: "MensClothing",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/MensClothingView.vue"),
+    meta: {
+      layout: "AppLayoutDefault",
+    },
   },
   {
     path: "/WomensClothing",
     name: "WomensClothing",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/WomensClothingView.vue"),
+    meta: {
+      layout: "AppLayoutDefault",
+    },
   },
   {
     path: "/Electronics",
     name: "Electronics",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/ElectronicsView.vue"),
+    meta: {
+      layout: "AppLayoutDefault",
+    },
   },
   {
     path: "/Jewelery",
     name: "Jewelery",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/JeweleryView.vue"),
+    meta: {
+      layout: "AppLayoutDefault",
+    },
   },
 ];
 

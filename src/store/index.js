@@ -14,7 +14,24 @@ export default createStore({
     SET_PRODUCTS: (state, products) => {
       state.products = products;
     },
-    SORT_PRODUCTS: (state, option) => {},
+    SORT_PRODUCTS: (state, option) => {
+      switch (option) {
+        case 0:
+          console.log(state.products[0].price);
+          state.products = state.products.sort((a, b) => {
+            console.log(a.title);
+            a.price - b.price;
+          });
+          break;
+        case 1:
+          state.products = state.products.sort((a, b) => {
+            a.price > b.price ? 1 : -1;
+          });
+          break;
+        default:
+          break;
+      }
+    },
   },
   actions: {
     FETCH_PRODUCTS({ commit }, categoty) {

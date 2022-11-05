@@ -1,11 +1,13 @@
 <template>
-  <ul class="products-list">
-    <product-list-item
-      v-for="product in GET_PRODUCTS"
-      :key="product.id"
-      :product="product"
-    />
-  </ul>
+  <div class="catalog__products products">
+    <ul class="products-list">
+      <product-list-item
+        v-for="product in GET_PRODUCTS"
+        :key="product.id"
+        :product="product"
+      />
+    </ul>
+  </div>
 </template>
 
 <script>

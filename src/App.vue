@@ -1,18 +1,14 @@
 <template>
-  <header-app />
-  <router-view />
-  <footer-app />
+  <app-layout>
+    <router-view />
+  </app-layout>
 </template>
 <script>
-import HeaderApp from "@/components/HeaderApp.vue";
-import FooterApp from "@/components/FooterApp.vue";
+import AppLayout from "@/layouts/AppLayout";
 
 export default {
   name: "App",
-  components: {
-    HeaderApp,
-    FooterApp,
-  },
+  components: { AppLayout },
 };
 </script>
 
