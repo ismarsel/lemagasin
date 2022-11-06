@@ -4,7 +4,7 @@
       href=""
       class="product-card__link"
       @mouseover="isShowInfo = !isShowInfo"
-      @mouseleave="isShowInfo = !isShowInfo"
+      @mouseout="isShowInfo = !isShowInfo"
     >
       <img class="product-card__img" :src="product.image" alt="Men's jacket" />
       <div class="product-card__price">
@@ -17,7 +17,7 @@
         class="product-card__info"
         v-if="isShowInfo"
         @mouseover="isShowInfo = !isShowInfo"
-        @mouseleave="isShowInfo = !isShowInfo"
+        @mouseout="isShowInfo = !isShowInfo"
       >
         <div class="size">
           Size:
@@ -27,7 +27,10 @@
             <li class="size-list__item">46</li>
           </ul>
         </div>
-        <button class="btn-reset product-card__btn">Show</button>
+        <div class="product-card__btns flex--spbetween">
+          <button class="btn-reset product-card__btn">Show</button>
+          <button class="btn-reset product-card__btn">Buy</button>
+        </div>
       </div>
     </a>
   </li>

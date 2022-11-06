@@ -12,7 +12,7 @@
 import ProductList from "@/components/ProductList.vue";
 import SearchInput from "@/components/UI/SearchInput.vue";
 import SelectFilter from "@/components/UI/SelectFilter.vue";
-import { mapActions, mapGetters, mapMutations } from "vuex";
+import { mapActions, mapMutations, mapGetters } from "vuex";
 export default {
   name: "ElectronicsView",
   components: {
@@ -23,17 +23,17 @@ export default {
   data() {
     return {
       categoryName: "electronics",
+      sortedProducts: [],
     };
   },
   computed: {
     ...mapGetters(["GET_PRODUCTS"]),
   },
   methods: {
-    ...mapActions(["FETCH_PRODUCTS", "SORT_PRODUCTS"]),
-    ...mapMutations([]),
+    ...mapActions(["FETCH_PRODUCTS"]),
+    ...mapMutations(["SORT_PRODUCTS_STATE"]),
     selectHandle(option) {
-      this.SORT_PRODUCTS(option);
-      this.GET_PRODUCTS;
+      this.SORT_PRODUCTS_STATE(option);
     },
   },
   created() {

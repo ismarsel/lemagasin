@@ -30,12 +30,9 @@ export default {
   },
   methods: {
     ...mapActions(["FETCH_PRODUCTS"]),
-    ...mapMutations(["SORT_PRODUCTS"]),
-    sortByHandle(option) {
-      this.SORT_PRODUCTS(option);
-    },
+    ...mapMutations(["SORT_PRODUCTS_STATE"]),
     selectHandle(option) {
-      console.log(option);
+      this.SORT_PRODUCTS_STATE(option);
     },
   },
   created() {

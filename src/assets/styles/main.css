@@ -54,23 +54,8 @@
 	--mailruBlue: #168de2;
 	--badgePremium: #000;
 	--headerPremiumCategoriesBackground: linear-gradient(180deg, var(--secondaryBackgroundColor) 0%, rgba(245, 245, 245, 0) 100%);
-	--fontSizeAccident: 40px/44px "CoFo Sans Lamoda", sans-serif;
-	--fontSizeHeadLine: 24px/32px "CoFo Sans Lamoda", sans-serif;
-	--fontSizeHeadLineS: 20px/24px "CoFo Sans Lamoda", sans-serif;
-	--fontSizeSubLine: 16px/20px "CoFo Sans Lamoda", sans-serif;
-	--fontSize: 13px/16px "CoFo Sans Lamoda", sans-serif;
-	--fontSizeCaption: 11px/16px "CoFo Sans Lamoda", sans-serif;
-	--fontSizeSmall: 9px/16px "CoFo Sans Lamoda", sans-serif;
-	--fontSizeAccidentBold: bold 40px/44px "CoFo Sans Lamoda", sans-serif;
-	--fontSizeHeadLineBold: bold 24px/32px "CoFo Sans Lamoda", sans-serif;
-	--fontSizeSubLineBold: bold 16px/20px "CoFo Sans Lamoda", sans-serif;
-	--fontSizeBold: bold 13px/16px "CoFo Sans Lamoda", sans-serif;
-	--fontSizeCaptionBold: bold 11px/16px "CoFo Sans Lamoda", sans-serif;
 	--focusBox: 0 0 4px var(--primaryColor);
 	--errorBox: 0 0 4px var(--attentionColor);
-	--animationDuration: .3s;
-	--animationHeartbeatOnce: heartbeat .6s 1;
-	--animationHeartbeatInfinite: heartbeat .6s infinite;
 	--separatorColor: #e5e5e5;
 	--secondaryBorderColor: #000;
 	--thinBorderWidth: 1px;
@@ -81,22 +66,11 @@
 	--middleSecondaryBorder: 2px solid var(--secondaryBorderColor);
 	--thickSecondaryBorder: var(--thickBorderWidth) solid var(--secondaryBorderColor);
 	--additionalBlackColor: #000;
-	--additionalDarkBlueColor: #3c5064;
-	--additionalBlueColor: #4178aa;
-	--additionalGoldColor: #a5825f;
-	--additionalMintColor: #a5d2a0;
-	--additionalPaleBlueColor: #cde6ff;
 	--additionalPalePinkColor: #ffd7d2;
-	--additionalBlue20FlatColor: #d9e4ee;
-	--additionalLightPaleBlueColor: #e9f4ff;
-	--additionalPalePink20FlatColor: #fff7f6;
-	--additionalPalePink40FlatColor: #ffefed;
-	--additionalGold20FlatColor: #ede6df;
 	--shadowBox: 0 0 8px rgba(0, 0, 0, .16);
 	--shadowColor: transparent;
 	--shadowPopupBox: 0 2px 48px rgba(0, 0, 0, .24);
 	--shadowPremiumHeader: 0 8px 8px 0 rgba(0, 0, 0, .08);
-	--productImageAspectRatio: .694;
 	--zIndexSticky: 3;
 	--zIndexStickyFilters: 10;
 	--zIndexStickySearchBar: 12;
@@ -107,9 +81,7 @@
 	--zIndexSidebar: 20000;
 	--zIndexModal: 20000;
 	--zIndexDesktopSidebar: 20002;
-	--cartAbandonerBackgound: #ef3840;
-	--cartAbandonerBorder: #eee;
-	--cartAbandonerShadow: #ccc;
+	
 }
 
 /* FONTS LOAD SECTION */
@@ -290,9 +262,24 @@ a {
 }
 .login {
 }
-.cart span {
-  padding-left: 5px;
+.cart {
+  position: relative;
 }
+
+.cart__count {
+  position: absolute;
+  right: -20px;
+  top: -10px;
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-color: var(--actionColor);
+  color: #000;
+  font-size: 11px;
+  text-align: center;
+  border-radius: 50%;
+}
+
 
 /* MAIN */
 
@@ -529,7 +516,7 @@ a {
   position: absolute;
   right: -3px;
   left: -5px;
-  bottom: -50px;  
+  bottom: -65px;  
   padding-left: 5px;
   background-color: #fff;
   z-index: 111;
@@ -546,13 +533,14 @@ a {
 .size-list__item {
   padding-left: 5px;
 }
+
 .product-card__btn {
   width: 100%;
+  height: 40px;
   color: var(--secondaryLabelColor);
-  background-color: var(--)
 }
 .product-card__btn:hover {
-  color: inherit;
+  color: var(--additionalBlueColor);
 }
 
 /* PRODUCT POPUP */
@@ -622,3 +610,4 @@ a {
 }
 .product-popup__info {
 }
+

@@ -4,10 +4,14 @@ import axios from "axios";
 export default createStore({
   state: {
     products: [],
+    cart: [],
   },
   getters: {
     GET_PRODUCTS: (state) => {
       return state.products;
+    },
+    GET_CART_PRODUCTS: (state) => {
+      return state.cart;
     },
     GET_PRODUCTS_LENGTH: (state) => {
       return state.products.length;
@@ -21,20 +25,7 @@ export default createStore({
       state.products = products;
     },
     SORT_PRODUCTS_STATE: (state, option) => {
-      switch (option) {
-        case 1:
-          state.products = state.products.sort((a, b) => {
-            a.price - b.price;
-          });
-          break;
-        case 2:
-          state.products = state.products.sort((a, b) => {
-            a.price < b.price ? 1 : -1;
-          });
-          break;
-        default:
-          break;
-      }
+      console.log(state.products, option);
     },
   },
   actions: {
@@ -48,9 +39,6 @@ export default createStore({
           this.error = true;
           console.log(error);
         });
-    },
-    SORT_PRODUCTS({ commit }, sortOption) {
-      commit("SORT_PRODUCTS_STATE", sortOption);
     },
   },
   modules: {},
