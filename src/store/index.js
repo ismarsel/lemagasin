@@ -9,23 +9,27 @@ export default createStore({
     GET_PRODUCTS: (state) => {
       return state.products;
     },
+    GET_PRODUCTS_LENGTH: (state) => {
+      return state.products.length;
+    },
+    GET_CURRENT_CATEGORY: (state) => {
+      return state.products[0].category;
+    },
   },
   mutations: {
     SET_PRODUCTS: (state, products) => {
       state.products = products;
     },
-    SORT_PRODUCTS: (state, option) => {
+    SORT_PRODUCTS_STATE: (state, option) => {
       switch (option) {
-        case 0:
-          console.log(state.products[0].price);
+        case 1:
           state.products = state.products.sort((a, b) => {
-            console.log(a.title);
             a.price - b.price;
           });
           break;
-        case 1:
+        case 2:
           state.products = state.products.sort((a, b) => {
-            a.price > b.price ? 1 : -1;
+            a.price < b.price ? 1 : -1;
           });
           break;
         default:
@@ -44,6 +48,9 @@ export default createStore({
           this.error = true;
           console.log(error);
         });
+    },
+    SORT_PRODUCTS({ commit }, sortOption) {
+      commit("SORT_PRODUCTS_STATE", sortOption);
     },
   },
   modules: {},

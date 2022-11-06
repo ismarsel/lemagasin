@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 const routes = [
   {
     path: "/",
-    name: "Home",
+    name: "HomeView",
     // component: HomeView,
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/HomeView.vue"),
@@ -13,38 +13,38 @@ const routes = [
   },
   {
     path: "/MensClothing",
-    name: "MensClothing",
+    name: "MensClothingView",
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/MensClothingView.vue"),
     meta: {
-      layout: "AppLayoutDefault",
+      layout: "AppLayoutCatalog",
     },
   },
   {
     path: "/WomensClothing",
-    name: "WomensClothing",
+    name: "WomensClothingView",
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/WomensClothingView.vue"),
     meta: {
-      layout: "AppLayoutDefault",
+      layout: "AppLayoutCatalog",
     },
   },
   {
     path: "/Electronics",
-    name: "Electronics",
+    name: "ElectronicsView",
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/ElectronicsView.vue"),
     meta: {
-      layout: "AppLayoutDefault",
+      layout: "AppLayoutCatalog",
     },
   },
   {
     path: "/Jewelery",
-    name: "Jewelery",
+    name: "JeweleryView",
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/JeweleryView.vue"),
     meta: {
-      layout: "AppLayoutDefault",
+      layout: "AppLayoutCatalog",
     },
   },
 ];

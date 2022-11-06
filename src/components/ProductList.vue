@@ -2,7 +2,7 @@
   <div class="catalog__products products">
     <ul class="products-list">
       <product-list-item
-        v-for="product in GET_PRODUCTS"
+        v-for="product in products"
         :key="product.id"
         :product="product"
       />
@@ -13,7 +13,6 @@
 <script>
 import ProductListItem from "@/components/ProductListItem.vue";
 
-import { mapGetters } from "vuex";
 export default {
   name: "ProductList",
   components: {
@@ -22,8 +21,13 @@ export default {
   data() {
     return {};
   },
-  computed: {
-    ...mapGetters(["GET_PRODUCTS"]),
+  props: {
+    products: {
+      type: Array,
+      default() {
+        return [];
+      },
+    },
   },
 };
 </script>

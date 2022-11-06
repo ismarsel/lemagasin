@@ -451,24 +451,7 @@ a {
   margin-left: auto;
 }
 
-.dropdown-filter {
-  border: 1px solid var(--disabledColor);
-  padding: 0 30px 0 10px;
-  border-radius: 4px;
-  line-height: 36px;
-  cursor: pointer;
-  background-image: url("../images/icons/filter_arrow_white.svg");
-  background-repeat: no-repeat;
-  background-position: 90%  center;
-  white-space: nowrap;
-  color: var(--backgroundColor);
-}
-.dropdown-filter {
-  filter: invert(1);
-}
-.dropdown-filter__option {
-  padding: 0 2em;
-}
+
 
 .search {
   position: relative;
@@ -545,7 +528,8 @@ a {
 .product-card__info {
   position: absolute;
   right: -3px;
-  left: -5px;  
+  left: -5px;
+  bottom: -50px;  
   padding-left: 5px;
   background-color: #fff;
   z-index: 111;

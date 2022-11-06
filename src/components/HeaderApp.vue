@@ -55,7 +55,7 @@
         </nav>
         <a href="/" class="logo">lemagasin</a>
         <div class="user-block flex--spbetween">
-          <a href="#" class="login">Login</a>
+          <a href="./index.html" class="login">Login</a>
           <a href="#" class="cart flex">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path

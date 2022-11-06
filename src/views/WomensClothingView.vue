@@ -1,30 +1,24 @@
 <template>
-  <div class="category">
-    <div class="container">
-      <div class="flex--spbetween">
-        <h1 class="category__title">
-          Women's clothin
-          <span class="products-count">{{ this.quantity }} units</span>
-        </h1>
-        <select-filter />
-        <search-input />
-      </div>
-      <product-list />
+  <div class="catalog">
+    <div class="catalog__filters">
+      <select-filter @selectOption="selectHandle" />
+      <search-input />
     </div>
+    <product-list :products="GET_PRODUCTS" />
   </div>
 </template>
 
 <script>
 import ProductList from "@/components/ProductList.vue";
-import SelectFilter from "@/components/UI/SelectFilter.vue";
 import SearchInput from "@/components/UI/SearchInput.vue";
-import { mapActions, mapGetters } from "vuex";
+import SelectFilter from "@/components/UI/SelectFilter.vue";
+import { mapActions, mapGetters, mapMutations } from "vuex";
 export default {
-  name: "WomensClothing",
+  name: "ElectronicsView",
   components: {
     ProductList,
-    SelectFilter,
     SearchInput,
+    SelectFilter,
   },
   data() {
     return {
@@ -33,12 +27,16 @@ export default {
   },
   computed: {
     ...mapGetters(["GET_PRODUCTS"]),
-    quantity() {
-      return this.GET_PRODUCTS.length;
-    },
   },
   methods: {
     ...mapActions(["FETCH_PRODUCTS"]),
+    ...mapMutations(["SORT_PRODUCTS"]),
+    sortByHandle(option) {
+      this.SORT_PRODUCTS(option);
+    },
+    selectHandle(option) {
+      console.log(option);
+    },
   },
   created() {
     this.FETCH_PRODUCTS(this.categoryName);

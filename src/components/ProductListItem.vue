@@ -3,8 +3,8 @@
     <a
       href=""
       class="product-card__link"
-      @mouseover="showInfo"
-      @mouseleave="hideInfo"
+      @mouseover="isShowInfo = !isShowInfo"
+      @mouseleave="isShowInfo = !isShowInfo"
     >
       <img class="product-card__img" :src="product.image" alt="Men's jacket" />
       <div class="product-card__price">
@@ -13,7 +13,12 @@
       <div class="product-card__title">
         <h3>{{ product.title }}</h3>
       </div>
-      <div class="product-card__info" v-if="isShowInfo">
+      <div
+        class="product-card__info"
+        v-if="isShowInfo"
+        @mouseover="isShowInfo = !isShowInfo"
+        @mouseleave="isShowInfo = !isShowInfo"
+      >
         <div class="size">
           Size:
           <ul class="size-list">
@@ -45,14 +50,6 @@ export default {
       isShowInfo: false,
     };
   },
-  /* methods: {
-    showInfo() {
-      this.isShowInfo = true;
-    },
-    hideInfo() {
-      this.isShowInfo = false;
-    },
-  }, */
 };
 </script>
 
