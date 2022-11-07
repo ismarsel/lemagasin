@@ -1,21 +1,20 @@
 # lemagasin
 
-## Project setup
+## Установить проект
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Запустить сервер для разработки
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Собрать проект
 ```
 npm run build
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+### Посмотреть можно по ссылке
+
+http://cu86987.tmweb.ru
